@@ -41,7 +41,7 @@ class _ProjetoInserirPageState extends State<ProjetoInserirPage> {
       appBar: AppBar(
         title: const Text('Gestão Starters GFT'),
         centerTitle: true,
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blue,
         // automaticallyImplyLeading: false,
         actions: [
           Column(
@@ -66,7 +66,7 @@ class _ProjetoInserirPageState extends State<ProjetoInserirPage> {
           ),
         ],
       ),
-      backgroundColor: Colors.brown[50],
+      backgroundColor: Colors.blue[50],
       body: Container(
         padding: const EdgeInsets.all(50),
         child: ListView(
@@ -83,7 +83,7 @@ class _ProjetoInserirPageState extends State<ProjetoInserirPage> {
                   width: 150,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      primary: Colors.brown.shade900,
+                      primary: Colors.blue.shade900,
                     ),
                     child: const Text('Salvar'),
                     onPressed: () {
@@ -114,7 +114,7 @@ class _ProjetoInserirPageState extends State<ProjetoInserirPage> {
                   width: 150,
                   child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        primary: Colors.brown.shade900,
+                        primary: Colors.blue.shade900,
                       ),
                       child: const Text('Cancelar'),
                       onPressed: () {
@@ -134,19 +134,19 @@ class _ProjetoInserirPageState extends State<ProjetoInserirPage> {
       controller: controller,
       obscureText: senha != null ? true : false,
       style: const TextStyle(
-        color: Colors.brown,
+        color: Colors.black,
         fontWeight: FontWeight.w300,
       ),
       decoration: InputDecoration(
-        prefixIcon: Icon(icone, color: Colors.brown),
-        prefixIconColor: Colors.brown,
+        prefixIcon: Icon(icone, color: Colors.black),
+        prefixIconColor: Colors.black,
         labelText: texto,
-        labelStyle: const TextStyle(color: Colors.brown),
+        labelStyle: const TextStyle(color: Colors.black),
         border: const OutlineInputBorder(),
-        focusColor: Colors.brown,
+        focusColor: Colors.black,
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.brown,
+            color: Colors.black,
             width: 0.0,
           ),
         ),

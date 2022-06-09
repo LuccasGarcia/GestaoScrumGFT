@@ -28,7 +28,7 @@ class _DailyStarterPageState extends State<DailyStarterPage> {
       appBar: AppBar(
         title: const Text('Gestão Starters GFT'),
         centerTitle: true,
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blue,
         // automaticallyImplyLeading: false,
         actions: [
           Column(
@@ -53,7 +53,7 @@ class _DailyStarterPageState extends State<DailyStarterPage> {
           ),
         ],
       ),
-      backgroundColor: Colors.brown[50],
+      backgroundColor: Colors.blue[50],
       body: Container(
         padding: const EdgeInsets.all(50),
 

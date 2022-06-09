@@ -27,7 +27,7 @@ class _DailyListPageState extends State<DailyListPage> {
       appBar: AppBar(
         title: const Text('Gestão Starters GFT'),
         centerTitle: true,
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blue,
         // automaticallyImplyLeading: false,
         actions: [
           Column(
@@ -52,7 +52,7 @@ class _DailyListPageState extends State<DailyListPage> {
           ),
         ],
       ),
-      backgroundColor: Colors.brown[50],
+      backgroundColor: Colors.blue[50],
       body: Container(
         padding: const EdgeInsets.all(50),
 
@@ -82,7 +82,7 @@ class _DailyListPageState extends State<DailyListPage> {
       ),
       floatingActionButton: FloatingActionButton(
         foregroundColor: Colors.white,
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
         onPressed: () {
           Navigator.pushNamed(context, 'daily_inserir');

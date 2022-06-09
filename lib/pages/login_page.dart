@@ -25,14 +25,15 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         title: const Text('Gestão Starters GFT'),
         centerTitle: true,
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blue,
       ),
-      backgroundColor: Colors.brown[50],
+      backgroundColor: Colors.blue[50],
       body: Container(
         padding: const EdgeInsets.all(50),
         child: ListView(
           children: [
-            const Text('Login'),
+            // const Text('Login'),
+            Image.asset('images/logo_gft.png', width: 300, height: 200),
             campoTexto('Email', txtEmail, Icons.email),
             const SizedBox(height: 20),
             campoTexto('Senha', txtSenha, Icons.lock, senha: true),
@@ -41,9 +42,9 @@ class _LoginPageState extends State<LoginPage> {
               style: OutlinedButton.styleFrom(
                 primary: Colors.white,
                 minimumSize: const Size(200, 45),
-                backgroundColor: Colors.brown,
+                backgroundColor: Colors.blue,
               ),
-              child: const Text('entrar'),
+              child: const Text('Entrar'),
               onPressed: () {
                 login(txtEmail.text, txtSenha.text);
               },
@@ -51,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 50),
             TextButton(
               style: OutlinedButton.styleFrom(
-                primary: Colors.brown,
+                primary: Colors.blue,
               ),
               child: const Text('Criar conta'),
               onPressed: () {
@@ -72,19 +73,19 @@ class _LoginPageState extends State<LoginPage> {
       controller: controller,
       obscureText: senha != null ? true : false,
       style: const TextStyle(
-        color: Colors.brown,
+        color: Colors.black,
         fontWeight: FontWeight.w300,
       ),
       decoration: InputDecoration(
-        prefixIcon: Icon(icone, color: Colors.brown),
-        prefixIconColor: Colors.brown,
+        prefixIcon: Icon(icone, color: Colors.black),
+        prefixIconColor: Colors.black,
         labelText: texto,
-        labelStyle: const TextStyle(color: Colors.brown),
+        labelStyle: const TextStyle(color: Colors.black),
         border: const OutlineInputBorder(),
-        focusColor: Colors.brown,
+        focusColor: Colors.black,
         focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.brown,
+            color: Colors.black,
             width: 0.0,
           ),
         ),

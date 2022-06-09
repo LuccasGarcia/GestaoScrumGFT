@@ -28,7 +28,7 @@ class _StarterListPageState extends State<StarterListPage> {
       appBar: AppBar(
         title: const Text('Gestão Starters GFT'),
         centerTitle: true,
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blue,
         //automaticallyImplyLeading: false,
         actions: [
           Column(
@@ -53,7 +53,7 @@ class _StarterListPageState extends State<StarterListPage> {
           ),
         ],
       ),
-      backgroundColor: Colors.brown[50],
+      backgroundColor: Colors.blue[50],
       body: Container(
         padding: const EdgeInsets.all(50),
 
@@ -83,7 +83,7 @@ class _StarterListPageState extends State<StarterListPage> {
       ),
       floatingActionButton: FloatingActionButton(
         foregroundColor: Colors.white,
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
         onPressed: () {
           Navigator.pushNamed(context, 'starter_inserir');

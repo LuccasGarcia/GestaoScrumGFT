@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "451425538316",
+    "project_id": "gestao-scrum-gft",
+    "storage_bucket": "gestao-scrum-gft.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451425538316:android:4c752a327ad18fa5a8f929",
+        "android_client_info": {
+          "package_name": "com.example.gestao_scrum_gft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451425538316-2ubev9mnf7hrdq5nr2gmmkvsff9act8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTnbraFZKd7z7nSdDPWRBhXvHmq8PwBwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451425538316-2ubev9mnf7hrdq5nr2gmmkvsff9act8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

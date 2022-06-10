@@ -23,7 +23,7 @@ Future<void> main() async {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Café Store',
+      title: 'Gestão Starters GFT',
       initialRoute: 'login',
       routes: {
         'login': (context) => const LoginPage(),

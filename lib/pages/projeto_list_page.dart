@@ -97,7 +97,7 @@ class _ProjetoListPageState extends State<ProjetoListPage> {
     String nota = item.data()['nota'];
     return ListTile(
       title: Text(modulo),
-      subtitle: Text(nota),
+      subtitle: Text('Nota: ' + nota),
       trailing: IconButton(
         icon: const Icon(Icons.delete_outline),
         onPressed: () {

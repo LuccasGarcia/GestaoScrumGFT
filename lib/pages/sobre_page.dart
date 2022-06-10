@@ -73,7 +73,7 @@ class _SobrePageState extends State<SobrePage> {
                 children: [
                   const Text(
                     'Projeto proposto para ser utilizado na gestão de\n\n'
-                    'estagiários na empresa GFT.\n\n'
+                    'estagiários na empresa GFT Brasil.\n\n'
                     'Auxilia nas informações das Dailys e na avaliação\n\n'
                     'dos projetos desenvolvidos durante o Treinamento\n\n'
                     'de Starter.',

@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:gestao_scrum_gft/pages/widgets/campoTexto.dart';
 
 import 'widgets/mensagem.dart';
 
@@ -60,34 +61,6 @@ class _LoginPageState extends State<LoginPage> {
               },
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  //
-  // CAMPO DE TEXTO
-  //
-  campoTexto(texto, controller, icone, {senha}) {
-    return TextField(
-      controller: controller,
-      obscureText: senha != null ? true : false,
-      style: const TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.w300,
-      ),
-      decoration: InputDecoration(
-        prefixIcon: Icon(icone, color: Colors.black),
-        prefixIconColor: Colors.black,
-        labelText: texto,
-        labelStyle: const TextStyle(color: Colors.black),
-        border: const OutlineInputBorder(),
-        focusColor: Colors.black,
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.black,
-            width: 0.0,
-          ),
         ),
       ),
     );

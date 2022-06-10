@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:gestao_scrum_gft/pages/widgets/campoTexto.dart';
 
 import 'widgets/mensagem.dart';
 
@@ -27,7 +28,16 @@ class _CriarContaPageState extends State<CriarContaPage> {
         padding: const EdgeInsets.all(50),
         child: ListView(
           children: [
-            const Text('Criar Conta'),
+            Center(
+              child: const Text(
+                'Criar Conta',
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 28,
+                  color: Color.fromARGB(255, 1, 55, 99),
+                ),
+              ),
+            ),
             campoTexto('Nome', txtNome, Icons.people),
             const SizedBox(height: 20),
             campoTexto('Email', txtEmail, Icons.email),
@@ -45,12 +55,13 @@ class _CriarContaPageState extends State<CriarContaPage> {
                       minimumSize: const Size(200, 45),
                       backgroundColor: Colors.blue,
                     ),
-                    child: const Text('criar'),
+                    child: const Text('Criar'),
                     onPressed: () {
                       criarConta(txtNome.text, txtEmail.text, txtSenha.text);
                     },
                   ),
                 ),
+                const SizedBox(width: 10),
                 SizedBox(
                   width: 150,
                   child: OutlinedButton(
@@ -59,7 +70,7 @@ class _CriarContaPageState extends State<CriarContaPage> {
                       minimumSize: const Size(200, 45),
                       backgroundColor: Colors.blue,
                     ),
-                    child: const Text('cancelar'),
+                    child: const Text('Cancelar'),
                     onPressed: () {
                       Navigator.pop(context);
                     },
@@ -69,31 +80,6 @@ class _CriarContaPageState extends State<CriarContaPage> {
             ),
             const SizedBox(height: 60),
           ],
-        ),
-      ),
-    );
-  }
-
-  campoTexto(texto, controller, icone, {senha}) {
-    return TextField(
-      controller: controller,
-      obscureText: senha != null ? true : false,
-      style: const TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.w300,
-      ),
-      decoration: InputDecoration(
-        prefixIcon: Icon(icone, color: Colors.black),
-        prefixIconColor: Colors.black,
-        labelText: texto,
-        labelStyle: const TextStyle(color: Colors.black),
-        border: const OutlineInputBorder(),
-        focusColor: Colors.black,
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.black,
-            width: 0.0,
-          ),
         ),
       ),
     );

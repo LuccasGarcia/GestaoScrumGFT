@@ -2,8 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/mensagem.dart';
-
 class SobrePage extends StatefulWidget {
   const SobrePage({Key? key}) : super(key: key);
 
@@ -12,37 +10,13 @@ class SobrePage extends StatefulWidget {
 }
 
 class _SobrePageState extends State<SobrePage> {
-  var txtNome = TextEditingController();
-  var txtPreco = TextEditingController();
-
-  //Retonar um documento pelo ID
-  retornarDocumentoById(id) async {
-    await FirebaseFirestore.instance
-        .collection('cafes')
-        .doc(id)
-        .get()
-        .then((doc) {
-      txtNome.text = doc.get('nome');
-      txtPreco.text = doc.get('preco');
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    //Recuperar o id do Café
-    var id = ModalRoute.of(context)!.settings.arguments;
-    if (id != null) {
-      if (txtNome.text.isEmpty && txtPreco.text.isEmpty) {
-        retornarDocumentoById(id);
-      }
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('Gestão Starters GFT'),
         centerTitle: true,
         backgroundColor: Colors.blue,
-        // automaticallyImplyLeading: false,
         actions: [
           Column(
             children: [
@@ -75,53 +49,68 @@ class _SobrePageState extends State<SobrePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                const Text('Sobre'),
-                const SizedBox(height: 150),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
                 const Text(
-                    'Projeto proposto para ser utilizado na gestão de starter na empresa GFT'),
-                const SizedBox(height: 150),
+                  'Sobre',
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28,
+                    color: Color.fromARGB(255, 1, 55, 99),
+                  ),
+                ),
+                const SizedBox(height: 50),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              // ignore: prefer_const_literals_to_create_immutables
-              children: [
-                const Text('Aqui ficará a Imagem'),
-                const Text('Luccas Garcia'),
-              ],
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white),
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+              ),
+              padding: EdgeInsets.all(40.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  const Text(
+                    'Projeto proposto para ser utilizado na gestão de\n\n'
+                    'estagiários na empresa GFT.\n\n'
+                    'Auxilia nas informações das Dailys e na avaliação\n\n'
+                    'dos projetos desenvolvidos durante o Treinamento\n\n'
+                    'de Starter.',
+                    textAlign: TextAlign.justify,
+                    style: const TextStyle(
+                      color: Color.fromARGB(255, 1, 55, 99),
+                    ),
+                  ),
+                  const SizedBox(height: 150),
+                ],
+              ),
             ),
+            const SizedBox(height: 20),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.white),
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+              ),
+              padding: EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  Image.asset('images/photo_aluno.png', width: 80, height: 80),
+                  const Text(
+                    'Luccas Garcia',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Color.fromARGB(255, 1, 55, 99),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
-        ),
-      ),
-    );
-  }
-
-  campoTexto(texto, controller, icone, {senha}) {
-    return TextField(
-      controller: controller,
-      obscureText: senha != null ? true : false,
-      style: const TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.w300,
-      ),
-      decoration: InputDecoration(
-        prefixIcon: Icon(icone, color: Colors.black),
-        prefixIconColor: Colors.black,
-        labelText: texto,
-        labelStyle: const TextStyle(color: Colors.black),
-        border: const OutlineInputBorder(),
-        focusColor: Colors.black,
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.black,
-            width: 0.0,
-          ),
         ),
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:gestao_scrum_gft/pages/widgets/campoTexto.dart';
 
 import 'widgets/mensagem.dart';
 
@@ -75,7 +76,15 @@ class _DailyInserirPageState extends State<DailyInserirPage> {
         padding: const EdgeInsets.all(50),
         child: ListView(
           children: [
-            const Text('Informar Daily'),
+            Center(
+                child: Text(
+              'Informar Daily',
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 28,
+                color: Color.fromARGB(255, 1, 55, 99),
+              ),
+            )),
             campoTexto('Data', txtData, Icons.calendar_today_outlined),
             const SizedBox(height: 20),
             campoTexto('Feito', txtFeito, Icons.work),
@@ -92,7 +101,9 @@ class _DailyInserirPageState extends State<DailyInserirPage> {
                   width: 150,
                   child: OutlinedButton(
                     style: OutlinedButton.styleFrom(
-                      primary: Colors.blue.shade900,
+                      primary: Colors.white,
+                      minimumSize: const Size(200, 45),
+                      backgroundColor: Colors.blue,
                     ),
                     child: const Text('Salvar'),
                     onPressed: () {
@@ -127,9 +138,11 @@ class _DailyInserirPageState extends State<DailyInserirPage> {
                   width: 150,
                   child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        primary: Colors.blue.shade900,
+                        primary: Colors.white,
+                        minimumSize: const Size(200, 45),
+                        backgroundColor: Colors.blue,
                       ),
-                      child: const Text('cancelar'),
+                      child: const Text('Cancelar'),
                       onPressed: () {
                         Navigator.pop(context);
                       }),
@@ -137,31 +150,6 @@ class _DailyInserirPageState extends State<DailyInserirPage> {
               ],
             )
           ],
-        ),
-      ),
-    );
-  }
-
-  campoTexto(texto, controller, icone, {senha}) {
-    return TextField(
-      controller: controller,
-      obscureText: senha != null ? true : false,
-      style: const TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.w300,
-      ),
-      decoration: InputDecoration(
-        prefixIcon: Icon(icone, color: Colors.black),
-        prefixIconColor: Colors.black,
-        labelText: texto,
-        labelStyle: const TextStyle(color: Colors.black),
-        border: const OutlineInputBorder(),
-        focusColor: Colors.black,
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Colors.black,
-            width: 0.0,
-          ),
         ),
       ),
     );

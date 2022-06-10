@@ -93,12 +93,8 @@ class _DailyListPageState extends State<DailyListPage> {
 
   exibirDocumento(item) {
     String data = item.data()['data'];
-    String feito = item.data()['feito'];
-    String fazendo = item.data()['fazendo'];
-    String impedimentos = item.data()['impedimentos'];
     return ListTile(
       title: Text(data),
-      // subtitle: Text(feito),
       trailing: IconButton(
         icon: const Icon(Icons.delete_outline),
         onPressed: () {

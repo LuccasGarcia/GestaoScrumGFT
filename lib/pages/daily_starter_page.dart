@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:gestao_scrum_gft/pages/widgets/mensagem.dart';
 
 class DailyStarterPage extends StatefulWidget {
   const DailyStarterPage({Key? key}) : super(key: key);
